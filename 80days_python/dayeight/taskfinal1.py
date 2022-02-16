@@ -11,7 +11,7 @@ shift = int(input("Type the shift number:\n"))
 #text and plain is the arguement and message and shift_val is parameter
 def encrypt (t,s):
     cipher_text = ""
-    for i in alpha:
+    for i in t:
         pos = alpha.index(i)
         new_pos = pos + s
         new_i = alpha[new_pos]
@@ -21,12 +21,12 @@ def encrypt (t,s):
 encrypt(text,shift)    
 
 def decrypt (t,s):
-    t = ""
-    for i in alpha:
+    plain_text = ""
+    for i in t:
         pos = alpha.index(i)
         new_pos = pos - s
         new_i = alpha[new_pos]
-        t += new_i
+        plain_text += new_i
     print(f"The encrypted code is {t}")
 
 if direction == "encode":
